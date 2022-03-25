@@ -1,10 +1,12 @@
 .dashboard-container{
     display: grid;
     grid-template-columns: 4fr 1fr;
+    margin-top: 50px;
 }
 .dashboard-collection-area{
-    margin: 20px;
-    /* background-color: rgba(162, 224, 203, 0.658); */
+    background-color: #d0ffefa8;
+    margin: 20px 40px;
+    padding: 30px;
 }
 .collection-area-title{
     text-align: center;
@@ -12,6 +14,22 @@
 .collection-area{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    margin: 90px 50px;
+    grid-gap: 30px;
+    margin: 30px 50px;
+    
+}
+.lucky-area-title{
+    text-align: center;
+}
+.lucky-area{
+    background-color: rgb(213, 255, 213);
+    padding: 0px;
+    margin: 20px 0px;
+
+}
+.lucky-component{
+    padding: 20px;
+}
+.btn-draw{
+    text-align: center;
 }

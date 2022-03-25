@@ -1,8 +1,11 @@
 import React from 'react';
 import './Collection.css'
+import { AiFillLike } from 'react-icons/ai';
 
-const Collections = (props) => {
-    const {img, name, price } = props.collection;
+
+
+const Collections = ({collection, handleDraw}) => {
+    const {img, name, price } = collection;
     return (
         <div className='collection'>
            <img src={img} alt="" />
@@ -10,6 +13,9 @@ const Collections = (props) => {
                 <p className='collection-name'>{name}</p>
                 <p>Price: ${price}</p>
            </div>
+            <button onClick={() => handleDraw(collection)} className='like-btn'>
+                <p className='like-btn-text'>Like It <AiFillLike className='like-btn-icon' /></p>
+            </button>
         </div>
     );
 };

@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Collection from '../Collection/Collection';
+import Draw from '../Draw/Draw';
+import LuckyButton from '../LuckyButton/LuckyButton';
 import './Dashboard.css'
 
 const Dashboard = () => {
 
     const [collections, setCollections] = useState([]);
+    const [draw, setDraw] = useState([]);
+    console.log(draw);
+
+    const handleDraw = (collection) => {
+        const newCollection = [...draw, collection];
+        setDraw(newCollection);
+    }
 
     useEffect( ()=>{
-        fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json')
+        fetch('https://raw.githubusercontent.com/mir-hussain/guns/main/data.json')
         // fetch(`products.json`)
             .then(res=> res.json())
             .then(data => setCollections(data))
@@ -23,12 +32,22 @@ const Dashboard = () => {
                         collections.map(collection => <Collection
                             key={collection.id}
                             collection={collection}
+                            handleDraw = {handleDraw}
                         ></Collection>)
                     }
                 </div>
              </div>
-             <div className="lucy-area">
-                 <h1>See yours luck</h1>
+             <div className="lucky-area">
+                 <h1 className='lucky-area-title'>See yours luck</h1>
+                 <div className='lucky-component'>
+                     {
+                        draw.map(liked=> <Draw
+                        key={liked.id}
+                        liked ={liked}
+                        ></Draw>)
+                     }
+                    <span className='btn-draw'><LuckyButton></LuckyButton></span>
+                 </div>
              </div>
         </div>
     );

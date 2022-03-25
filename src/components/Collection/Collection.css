@@ -1,0 +1,26 @@
+.collection {
+  height: 538px;
+  width: 300px;
+  border: 3px solid rgba(145, 155, 163, 0.664);
+  border-radius: 10px;
+  position: relative;
+}
+
+.collection img {
+  height: 286px;
+  width: 286px;
+  border-radius: 8px;
+  /* position: absolute; */
+  margin: 7px;
+}
+.collection-info {
+  margin: 0 14px;
+}
+.collection-name {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  margin-top: 7px;
+}

@@ -16,8 +16,7 @@ const Dashboard = () => {
     }
 
     useEffect( ()=>{
-        fetch('https://raw.githubusercontent.com/mir-hussain/guns/main/data.json')
-        // fetch(`products.json`)
+        fetch(`collections.json`)
             .then(res=> res.json())
             .then(data => setCollections(data))
     },[]);
@@ -29,7 +28,7 @@ const Dashboard = () => {
         else {
             const newDraw = [...draw];
             const randomdraw = Math.floor(Math.random() * newDraw.length);
-            alert('Your Random item:' + newDraw[randomdraw].name);
+            alert('Your Random item: ' + newDraw[randomdraw].name);
         }
     }
 
@@ -57,7 +56,7 @@ const Dashboard = () => {
                 </div>
              </div>
              <div className="lucky-area">
-                 <h1 className='lucky-area-title'>See yours luck</h1>
+                 <h1 className='lucky-area-title'>Check yours luck</h1>
                  <div className='lucky-component'>
                      {
                         draw.map(liked=> <Draw

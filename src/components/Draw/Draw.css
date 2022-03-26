@@ -1,15 +1,14 @@
-.draw-area{
-    background-color: #25df82;
-    padding: 5px;
-    width: 300px;
-    margin: 20px 10px;
+.draw-area {
+  background-color: #25df82;
+  padding: 5px;
+  width: 300px;
+  margin: 20px 10px;
 }
-
-.draw{
-    display: flex;
-    border-radius: 15px;
-    background-color: hsl(33, 69%, 97%);
+.draw {
+  display: flex;
+  border-radius: 15px;
+  background-color: hsl(33, 69%, 97%);
 }
-.draw-area img{
-    width: 20%;
+.draw-area img {
+  width: 20%;
 }

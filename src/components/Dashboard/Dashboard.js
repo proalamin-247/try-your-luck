@@ -23,7 +23,6 @@ const Dashboard = () => {
     },[]);
 
     const drawBtn = () => {
-        console.log('drawww')
         if (draw.length === 0) {
             alert('please select your faviourit collection')
         }

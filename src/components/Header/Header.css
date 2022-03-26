@@ -1,3 +1,11 @@
-.header{
-    text-align: center;
+.header {
+  text-align: center;
+}
+
+/* responsive */
+@media only screen and (max-width: 600px) {
+    .header{
+        margin-left: 45%;
+        margin-bottom: -40px;
+    }
 }

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Collection from '../Collection/Collection';
 import Draw from '../Draw/Draw';
-import LuckyButton from '../LuckyButton/LuckyButton';
 import './Dashboard.css'
+import { AiFillFire } from 'react-icons/ai';
+import { BiReset } from 'react-icons/bi';
 
 const Dashboard = () => {
 
     const [collections, setCollections] = useState([]);
     const [draw, setDraw] = useState([]);
-    console.log(draw);
 
     const handleDraw = (collection) => {
         const newCollection = [...draw, collection];
@@ -22,6 +22,26 @@ const Dashboard = () => {
             .then(data => setCollections(data))
     },[]);
 
+    const drawBtn = () => {
+        console.log('drawww')
+        if (draw.length === 0) {
+            alert('please select your faviourit collection')
+        }
+        else {
+            const newDraw = [...draw];
+            const randomdraw = Math.floor(Math.random() * newDraw.length);
+            alert('Your Random item:' + newDraw[randomdraw].name);
+        }
+    }
+
+    const reset = () => {
+        if (draw.length === 0) {
+            alert('please select your faviourit collection')
+        }
+        else {
+            setDraw([]);
+        }
+    }
 
     return (
         <div className='dashboard-container'>
@@ -46,7 +66,11 @@ const Dashboard = () => {
                         liked ={liked}
                         ></Draw>)
                      }
-                    <span className='btn-draw'><LuckyButton></LuckyButton></span>
+                    <div className='luck-area-btn'>
+                        <button onClick={drawBtn} className='lucky-btn'>My luck <AiFillFire className='lucky-btn-icon' /></button>
+                        <br />
+                        <button onClick={() => reset()} className='reset-btn'>Reset<BiReset className='rest-btn-icon' /> </button>
+                    </div>
                  </div>
              </div>
         </div>

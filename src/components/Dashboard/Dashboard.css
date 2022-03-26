@@ -22,7 +22,7 @@
     text-align: center;
 }
 .lucky-area{
-    background-color: rgb(213, 255, 213);
+    background-color: #d5ffd5;
     padding: 0px;
     margin: 20px 0px;
 
@@ -30,6 +30,43 @@
 .lucky-component{
     padding: 20px;
 }
-.btn-draw{
+.luck-area-btn{
     text-align: center;
+}
+.lucky-btn{
+    width: 50%;
+    border-radius: 10px;
+    height: 45px;
+    background-color: #56f3b7;
+    border: 3px solid red;
+    border: none;
+    font-size: 150%;
+    margin-bottom: 10px;
+}
+.reset-btn{
+    width: 50%;
+    border-radius: 10px;
+    height: 45px;
+    background-color: #f35656;
+    border: none;
+    font-size: 150%;
+}
+
+
+/* responsive */
+@media screen and (max-width: 600px) {
+
+    .dashboard-container{
+        /* display: block; */
+        /* grid-row: inherit; */
+        /* grid-template-rows: 1fr, 1fr; */
+        
+    /* display: grid; */
+    /* grid-template-columns: 2fr 2fr; */
+    /* margin-top: 50px; */
+    }
+
+    .collection-area{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

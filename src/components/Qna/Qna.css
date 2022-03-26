@@ -1,0 +1,22 @@
+.qna-area{
+    background-color: rgba(163, 231, 209, 0.918);
+    padding: 30px;
+    margin: 30px;
+}
+.qus-1{
+    background-color: azure;
+    padding: 30px;
+    margin: 15px;
+}
+code{
+    background-color: rgb(255, 210, 210);
+    padding: 2px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .qna-area{
+    width: 390px;
+  }
+  
+}

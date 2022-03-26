@@ -7,7 +7,7 @@ const Draw = ({liked}) => {
         <div className='draw-area'>
             <div className='draw'>
                 <img src={img} alt="" />
-                <p>{name}</p>
+                <p> {name}</p>
             </div>
         </div>
     );
